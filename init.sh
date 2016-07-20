@@ -14,6 +14,7 @@ function fedora {
 }
 
 DISTRO=$(lsb_release -a 2>/dev/null | grep 'Distributor' | awk 'END {print $3}')
+USER=$(whoami)
 
 case $DISTRO in
   ('Ubuntu')
@@ -28,11 +29,14 @@ case $DISTRO in
     ;;
 esac
 
-ln -s .vimrc ~/.vimrc
-ln -s .vim ~/.vim
-ln -s .config/base16-shell ~/.config/base16-shell
-ln -s .tmux.conf ~/.tmux.conf
-sh ~/.vim/bundle/youcompleteme/install.sh
+ln -s .vimrc /home/$USER/.vimrc
+ln -s .vim /home/$USER/.vim
+ln -s .config/base16-shell /home/$USER/.config/base16-shell
+ln -s .tmux.conf /home/$USER/.tmux.conf
+
+./home/$USER/.vim/bundle/youcompleteme/install.py
+
+git submodule update --init --recursive
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
