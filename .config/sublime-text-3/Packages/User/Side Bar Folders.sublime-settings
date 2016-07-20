@@ -1,0 +1,32 @@
+{
+	"folders":
+	[
+		{
+			"path": "/home/bart/git"
+		},
+		{
+			"path": "/home/bart/Documents/vagrant"
+		},
+		{
+			"path": "/home/bart/Documents/git/inuits/puppetmaster"
+		},
+		{
+			"path": "/home/bart/Documents/git/inuits/puppet-tree-mgmt"
+		},
+		{
+			"path": "/home/bart/Documents/git/inuits/inuits-hiera-mgmt"
+		},
+		{
+			"path": "/home/bart/Documents/git/inuits"
+		},
+		{
+			"path": "/home/bart/Documenten/dockerstuff"
+		},
+		{
+			"path": "/home/bart/Documenten"
+		},
+		{
+			"path": "/home/bart/.config/fish/functions"
+		}
+	]
+}
