@@ -88,3 +88,6 @@
 [submodule ".vim/bundle/jquery.vim"]
 	path = .vim/bundle/jquery.vim
 	url = https://github.com/nono/jquery.vim
+[submodule ".vim/bundle/vim-snippets"]
+	path = .vim/bundle/vim-snippets
+	url = https://github.com/honza/vim-snippets
