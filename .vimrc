@@ -42,7 +42,6 @@ set incsearch       " Highlight search results as the search is typed
 set showcmd         " Show command on the bottom
 set ruler           " Show line and cursor position
 set cursorline      " Highlight current line
-" set colorcolumn=80  " Highlight the 80th column
 set listchars=tab:>-,trail:· " Show tabs and trailing space
 set list            " Enable the above settings
 syntax on           " Enable syntax highlighting
@@ -103,13 +102,6 @@ set showmode
 """""""""""""""""""""""""""""
 "        Custom Edits       "
 """""""""""""""""""""""""""""
-" Mappings to move lines: http://vim.wikia.com/wiki/Moving_lines_up_or_down
-nnoremap <A-j> :m+<CR>==
-nnoremap <A-k> :m-2<CR>==
-inoremap <A-j> <Esc>:m+<CR>==gi
-inoremap <A-k> <Esc>:m-2<CR>==gi
-vnoremap <A-j> :m'>+<CR>gv=gv
-vnoremap <A-k> :m-2<CR>gv=gv
 
 " A trick for when you forgot to sudo before editing a file that requires root privileges (typically /etc/hosts).
 " This lets you use w!! to do that after you opened the file already:
@@ -125,11 +117,9 @@ endif
 if &t_Co==256
     let base16colorspace=256
     set background=dark     " Use dark background
-    "colorscheme gruvbox  " Use nicer colourscheme
     colorscheme base16
     endif
 if has("gui_running")
-    "colorscheme gruvbox  " Gui sometimes doesn't set t_Co
     let base16colorspace=256
     set background=dark     " Use dark background
     colorscheme base16
@@ -137,8 +127,6 @@ if has("gui_running")
     set guioptions-=TlrbRLe " Hide the toolbar and scrollbars, use text tabs
     set guioptions+=c       " Don't open dialogue windows
     if has("linux")
-        "set guifont=Monospace\ 10   " Use different font
-        "set guifont='Roboto Mono for Powerline'\ 11
         set guifont=Roboto\ Mono\ for\ Powerline\ 10
     elseif has("Win32")
         set guifont=Consolas:h10
