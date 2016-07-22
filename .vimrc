@@ -1,24 +1,25 @@
 """""""""""""""""""""""""""""
 "        Behaviour          "
 """""""""""""""""""""""""""""
-set nocompatible    " Don't behave like Vi
-
-set wildmenu        " Enhanced command line completion
-set wildmode=longest,list   " Complete the longest match, then list others
+set nocompatible                " Don't behave like Vi
+set wildmenu                    " Enhanced command line completion
+set wildmode=longest,list       " Complete the longest match, then list others
 set backspace=indent,eol,start  " Allow backspacing over more stuff
-set confirm         " Ask to confirm instead of failing
-set ignorecase      " Case insensitive search
-set smartcase       " Case sensitive if search term contains capitals
-set linebreak       " Allow linebreaks between words
-set scrolloff=2     " Start scrolling a few lines from the border
-set visualbell      " Use colour blink instead of sound
-set display+=lastline   " Always display the last line of the screen
-set encoding=utf8   " Use utf8 as internal encoding
-set whichwrap+=<,>,h,l  " Allow cursor to wrap lines
-set hidden          " Allow opening new buffers without saving changes
-set laststatus=2    " Wider status line, needed for powerline
-set splitbelow      " Split window below
-set splitright      " Split window to the right
+set confirm                     " Ask to confirm instead of failing
+set ignorecase                  " Case insensitive search
+set smartcase                   " Case sensitive if search term contains capitals
+set linebreak                   " Allow linebreaks between words
+set scrolloff=2                 " Start scrolling a few lines from the border
+set visualbell                  " Use colour blink instead of sound
+set display+=lastline           " Always display the last line of the screen
+set encoding=utf8               " Use utf8 as internal encoding
+set whichwrap+=<,>,h,l          " Allow cursor to wrap lines
+set hidden                      " Allow opening new buffers without saving changes
+set laststatus=2                " Wider status line, needed for powerline
+set splitbelow                  " Split window below
+set splitright                  " Split window to the right
+set copyindent                  " Preserve copy indentation 
+set mouse=a                     " Enable mouse
 
 """""""""""""""""""""""""""""
 "        Formatting         "
@@ -28,9 +29,11 @@ set expandtab       " Convert tabs to spaces
 set softtabstop=0   " How many columns the tab key inserts
 set shiftwidth=2    " Width of 1 indentation level
 set smartindent     " Smart C-like autoindenting
+set smarttab        " Smart tab indentation
 
 " Determine indentation rules by filetype
 filetype plugin indent on
+autocmd filetype puppet  set expandtab
 
 """""""""""""""""""""""""""""
 "        Interface          "
@@ -102,6 +105,10 @@ set showmode
 """""""""""""""""""""""""""""
 "        Custom Edits       "
 """""""""""""""""""""""""""""
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
 
 " A trick for when you forgot to sudo before editing a file that requires root privileges (typically /etc/hosts).
 " This lets you use w!! to do that after you opened the file already:
