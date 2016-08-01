@@ -3,7 +3,7 @@
 ##FUNCTIONS
 function ubuntu {
   sudo apt update;
-  sudo apt install cmake gcc ctags python2.7-dev vim vim-nox-py2 htop tmux git zsh curl;
+  sudo apt install cmake gcc ctags python2.7-dev vim vim-nox-py2 htop tmux git zsh curl dh-autoreconf;
   sudo apt upgrade
 }
 
