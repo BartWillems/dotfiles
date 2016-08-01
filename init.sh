@@ -40,4 +40,4 @@ git submodule update --init --recursive
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-
+dconf write "/org/gnome/desktop/input-sources/xkb-options" "['caps:swapescape']"
