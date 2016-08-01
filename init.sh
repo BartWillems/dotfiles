@@ -34,9 +34,9 @@ ln -s $(pwd)/.vimrc /home/$USER/.vimrc
 ln -s $(pwd)/tmux.conf /home/$USER/.tmux.conf
 ln -s $(pwd)/config/base16-shell /home/$USER/.config/base16-shell
 
-./home/$USER/.vim/bundle/youcompleteme/install.py
-
 git submodule update --init --recursive
+
+./home/$USER/.vim/bundle/youcompleteme/install.py
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
