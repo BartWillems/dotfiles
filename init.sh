@@ -29,10 +29,10 @@ case $DISTRO in
     ;;
 esac
 
-ln -s $(pwd)/.vim /home/$USER/.vim
-ln -s $(pwd)/.vimrc /home/$USER/.vimrc
-ln -s $(pwd)/tmux.conf /home/$USER/.tmux.conf
-ln -s $(pwd)/config/base16-shell /home/$USER/.config/base16-shell
+ln -s $(pwd)/.vim                 /home/$USER/.vim
+ln -s $(pwd)/.vimrc               /home/$USER/.vimrc
+ln -s $(pwd)/.tmux.conf           /home/$USER/.tmux.conf
+ln -s $(pwd)/.config/base16-shell /home/$USER/.config/base16-shell
 
 git submodule update --init --recursive
 
