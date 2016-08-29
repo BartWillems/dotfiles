@@ -39,5 +39,6 @@ git submodule update --init --recursive
 ./home/$USER/.vim/bundle/youcompleteme/install.py
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+echo "sh $HOME/.config/base16-shell/base16-railscasts.dark.sh" >> /home/$USER/.zshrc
 
 dconf write "/org/gnome/desktop/input-sources/xkb-options" "['caps:swapescape']"
