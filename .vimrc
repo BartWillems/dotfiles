@@ -20,7 +20,6 @@ set splitbelow                  " Split window below
 set splitright                  " Split window to the right
 set copyindent                  " Preserve copy indentation 
 set mouse=a                     " Enable mouse
-set paste                       " Enable paste mode
 
 """""""""""""""""""""""""""""
 "        Formatting         "
