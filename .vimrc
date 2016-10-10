@@ -20,14 +20,15 @@ set splitbelow                  " Split window below
 set splitright                  " Split window to the right
 set copyindent                  " Preserve copy indentation 
 set mouse=a                     " Enable mouse
+set paste                       " Enable paste mode
 
 """""""""""""""""""""""""""""
 "        Formatting         "
 """""""""""""""""""""""""""""
-set tabstop=2       " Width of the tab character
+set tabstop=4       " Width of the tab character
 set expandtab       " Convert tabs to spaces
 set softtabstop=0   " How many columns the tab key inserts
-set shiftwidth=2    " Width of 1 indentation level
+set shiftwidth=4    " Width of 1 indentation level
 set smartindent     " Smart C-like autoindenting
 set smarttab        " Smart tab indentation
 
