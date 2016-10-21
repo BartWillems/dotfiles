@@ -3,7 +3,7 @@
 ##FUNCTIONS
 function ubuntu {
   sudo apt update;
-  sudo apt install cmake gcc ctags python2.7-dev vim htop tmux git zsh curl dh-autoreconf;
+  sudo apt install cmake gcc ctags python2.7-dev vim htop tmux git zsh curl dh-autoreconf wget curl;
   sudo apt upgrade
 }
 
@@ -42,3 +42,8 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 echo "sh $HOME/.config/base16-shell/base16-railscasts.dark.sh" >> /home/$USER/.zshrc
 
 dconf write "/org/gnome/desktop/input-sources/xkb-options" "['caps:swapescape']"
+
+wget https://telegram.org/dl/desktop/linux -O telegram.tar.xz && \
+    tar xf telegram.tar.xz && \
+    mkdir -p $HOME/.local/share/applications && \
+    mv telegram/* $HOME/.local/share/applications
