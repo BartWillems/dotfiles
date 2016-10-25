@@ -38,12 +38,13 @@ git submodule update --init --recursive
 
 /home/$USER/.vim/bundle/youcompleteme/install.py
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-echo "sh $HOME/.config/base16-shell/base16-railscasts.dark.sh" >> /home/$USER/.zshrc
 
 dconf write "/org/gnome/desktop/input-sources/xkb-options" "['caps:swapescape']"
 
 wget https://telegram.org/dl/desktop/linux -O telegram.tar.xz && \
     tar xf telegram.tar.xz && \
     mkdir -p $HOME/.local/share/applications && \
-    mv telegram/* $HOME/.local/share/applications
+    mv Telegram/* $HOME/.local/share/applications/
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+echo "sh $HOME/.config/base16-shell/base16-railscasts.dark.sh" >> /home/$USER/.zshrc
