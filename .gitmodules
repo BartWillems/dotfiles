@@ -97,6 +97,3 @@
 [submodule ".vim/bundle/auto-pairs"]
 	path = .vim/bundle/auto-pairs
 	url = https://github.com/jiangmiao/auto-pairs
-[submodule ".vim/bundle/PHP-Indenting-for-VIm"]
-	path = .vim/bundle/PHP-Indenting-for-VIm
-	url = https://github.com/2072/PHP-Indenting-for-VIm
