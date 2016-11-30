@@ -9,7 +9,7 @@ function ubuntu {
 
 
 function fedora {
-  sudo dnf install cmake gcc ctags python2.7-dev vim htop tmux git zsh curl;
+  sudo dnf install cmake gcc gcc-c++ ctags python-devel vim htop tmux git zsh curl;
   sudo dnf upgrade
 }
 
