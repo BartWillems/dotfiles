@@ -124,12 +124,12 @@ endif
 if &t_Co==256
     let base16colorspace=256
     set background=dark     " Use dark background
-    colorscheme base16
+    colorscheme gruvbox
     endif
 if has("gui_running")
     let base16colorspace=256
     set background=dark     " Use dark background
-    colorscheme base16
+    colorscheme gruvbox
     set guioptions+=TlrbRLe " Bug workaround
     set guioptions-=TlrbRLe " Hide the toolbar and scrollbars, use text tabs
     set guioptions+=c       " Don't open dialogue windows
