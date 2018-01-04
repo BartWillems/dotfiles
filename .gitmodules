@@ -100,3 +100,6 @@
 [submodule ".vim/bundle/PHP-Indenting-for-VIm"]
 	path = .vim/bundle/PHP-Indenting-for-VIm
 	url = https://github.com/2072/PHP-Indenting-for-VIm
+[submodule ".vim/bundle/vim-toml"]
+	path = .vim/bundle/vim-toml
+	url = git@github.com:cespare/vim-toml.git
