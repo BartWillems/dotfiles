@@ -47,6 +47,7 @@ set ruler           " Show line and cursor position
 set cursorline      " Highlight current line
 set listchars=tab:>-,trail:· " Show tabs and trailing space
 set list            " Enable the above settings
+set hidden          " No need to save the current buffer every time you do a goto-definition
 syntax on           " Enable syntax highlighting
 
 """""""""""""""""""""""""""""
@@ -59,6 +60,10 @@ let g:airline_right_sep = ''
 let g:airline_left_alt_sep = ''
 let g:airline_right_alt_sep = ''
 let g:airline#extensions#tabline#enabled = 1    " Enable nice tabline
+
+let g:rustfmt_autosave = 1
+let g:racer_cmd = "/home/bart/.cargo/bin/racer"
+let g:racer_experimental_completer = 1
 
 let g:molokai_original = 1
 
