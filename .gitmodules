@@ -99,7 +99,7 @@
 	url = https://github.com/2072/PHP-Indenting-for-VIm
 [submodule ".vim/bundle/vim-toml"]
 	path = .vim/bundle/vim-toml
-	url = git@github.com:cespare/vim-toml.git
+	url = https://github.com/cespare/vim-toml.git
 [submodule ".vim/bundle/ctrlp"]
 	path = .vim/bundle/ctrlp
 	url = https://github.com/kien/ctrlp.vim
