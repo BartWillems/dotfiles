@@ -33,7 +33,8 @@ set smarttab        " Smart tab indentation
 
 " Determine indentation rules by filetype
 filetype plugin indent on
-autocmd filetype puppet  set expandtab
+autocmd filetype yaml    set tabstop=2
+autocmd filetype yaml    set shiftwidth=2
 
 """""""""""""""""""""""""""""
 "        Interface          "
@@ -59,15 +60,31 @@ let g:airline_left_sep = ''     " Use simple separators
 let g:airline_right_sep = ''
 let g:airline_left_alt_sep = ''
 let g:airline_right_alt_sep = ''
-let g:airline#extensions#tabline#enabled = 1    " Enable nice tabline
+
+set nosmd
+let g:airline_theme='atomic'
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#ale#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_buffers = 0
+let g:airline#extensions#tabline#show_splits = 0
+let g:airline#extensions#tabline#show_tabs = 1
+let g:airline#extensions#tabline#show_tab_nr = 0
+let g:airline#extensions#tabline#show_tab_type = 0
+let g:airline#extensions#tabline#close_symbol = '×'
+let g:airline#extensions#tabline#show_close_button = 0
 
 let g:rustfmt_autosave = 1
 let g:racer_cmd = "/home/bart/.cargo/bin/racer"
 let g:racer_experimental_completer = 1
 
-let g:molokai_original = 1
+" let g:molokai_original = 1
 
 let delimitMate_expand_cr = 1
+
+" Ansible
+let g:ansible_unindent_after_newline = 1
+
 
 """""""""""""""""""""""""""""
 "        Key mapping        "

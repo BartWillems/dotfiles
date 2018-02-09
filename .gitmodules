@@ -109,3 +109,9 @@
 [submodule ".vim/bundle/vim-racer"]
 	path = .vim/bundle/vim-racer
 	url = https://github.com/racer-rust/vim-racer.git
+[submodule ".vim/bundle/ansible-vim"]
+	path = .vim/bundle/ansible-vim
+	url = https://github.com/pearofducks/ansible-vim
+[submodule ".vim/bundle/vim-nord"]
+	path = .vim/bundle/vim-nord
+	url = git://github.com/arcticicestudio/nord-vim.git
