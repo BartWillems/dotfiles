@@ -115,3 +115,6 @@
 [submodule ".vim/bundle/vim-nord"]
 	path = .vim/bundle/vim-nord
 	url = git://github.com/arcticicestudio/nord-vim.git
+[submodule ".vim/bundle/go"]
+	path = .vim/bundle/go
+	url = https://github.com/fatih/vim-go.git
