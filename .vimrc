@@ -20,6 +20,7 @@ set splitbelow                  " Split window below
 set splitright                  " Split window to the right
 set copyindent                  " Preserve copy indentation 
 set mouse=a                     " Enable mouse
+set colorcolumn=80              " Visual 80 width column
 
 """""""""""""""""""""""""""""
 "        Formatting         "
@@ -74,9 +75,14 @@ let g:airline#extensions#tabline#show_tab_type = 0
 let g:airline#extensions#tabline#close_symbol = '×'
 let g:airline#extensions#tabline#show_close_button = 0
 
+" Rust
 let g:rustfmt_autosave = 1
+let g:rustfmt_fail_silently = 0
 let g:racer_cmd = "/home/bart/.cargo/bin/racer"
 let g:racer_experimental_completer = 1
+
+" Golang
+let g:go_fmt_command = "goimports"
 
 " let g:molokai_original = 1
 
