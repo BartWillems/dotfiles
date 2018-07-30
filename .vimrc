@@ -50,19 +50,38 @@ set cursorline      " Highlight current line
 set listchars=tab:>-,trail:· " Show tabs and trailing space
 set list            " Enable the above settings
 set hidden          " No need to save the current buffer every time you do a goto-definition
+set nosmd
 syntax on           " Enable syntax highlighting
 
 """""""""""""""""""""""""""""
 "        Plugins            "
 """""""""""""""""""""""""""""
-call pathogen#infect()          " Pathogen takes care of loading the plugins
+call plug#begin('~/.vim/plugged')
+
+Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-surround'
+Plug 'scrooloose/syntastic'
+Plug 'Valloric/YouCompleteMe'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'majutsushi/tagbar'
+Plug 'tpope/vim-commentary'
+Plug 'elmcast/elm-vim'
+Plug 'fatih/vim-go'
+Plug 'rust-lang/rust.vim'
+Plug 'racer-rust/vim-racer'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-surround'
+Plug 'Raimondi/delimitMate'             " Autocomplete quotes, parens, brackets,...
+
+call plug#end()
 
 let g:airline_left_sep = ''     " Use simple separators
 let g:airline_right_sep = ''
 let g:airline_left_alt_sep = ''
 let g:airline_right_alt_sep = ''
 
-set nosmd
 let g:airline_theme='atomic'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#ale#enabled = 1
@@ -81,10 +100,10 @@ let g:rustfmt_fail_silently = 0
 let g:racer_cmd = "/home/bart/.cargo/bin/racer"
 let g:racer_experimental_completer = 1
 
-" Golang
-let g:go_fmt_command = "goimports"
-
-" let g:molokai_original = 1
+" Elm
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:elm_syntastic_show_warnings = 1
 
 let delimitMate_expand_cr = 1
 
