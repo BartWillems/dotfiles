@@ -74,6 +74,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-surround'
 Plug 'Raimondi/delimitMate'             " Autocomplete quotes, parens, brackets,...
+Plug 'cespare/vim-toml'
 
 call plug#end()
 
