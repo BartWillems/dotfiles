@@ -20,7 +20,7 @@ set splitbelow                  " Split window below
 set splitright                  " Split window to the right
 set copyindent                  " Preserve copy indentation 
 set mouse=a                     " Enable mouse
-set colorcolumn=120              " Visual 80 width column
+set colorcolumn=120             " Visual 120 width column
 
 """""""""""""""""""""""""""""
 "        Formatting         "
@@ -59,7 +59,9 @@ syntax on           " Enable syntax highlighting
 call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'           " Show the git diff in the gutter
 Plug 'scrooloose/nerdtree'
+Plug 'xuyuanp/nerdtree-git-plugin'      " Git status icons in nerdtree
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/syntastic'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -74,6 +76,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-surround'
 Plug 'Raimondi/delimitMate'             " Autocomplete quotes, parens, brackets,...
 Plug 'cespare/vim-toml'
+Plug 'zchee/deoplete-go', { 'do': 'make'}
+Plug 'yuttie/comfortable-motion.vim'    " Really smooth scrolling
 
 if has('nvim')
   " Requires 'pip install neovim'
