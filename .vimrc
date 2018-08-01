@@ -20,7 +20,7 @@ set splitbelow                  " Split window below
 set splitright                  " Split window to the right
 set copyindent                  " Preserve copy indentation 
 set mouse=a                     " Enable mouse
-set colorcolumn=80              " Visual 80 width column
+set colorcolumn=120              " Visual 80 width column
 
 """""""""""""""""""""""""""""
 "        Formatting         "
@@ -62,7 +62,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/syntastic'
-Plug 'Valloric/YouCompleteMe'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-commentary'
@@ -75,6 +74,17 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-surround'
 Plug 'Raimondi/delimitMate'             " Autocomplete quotes, parens, brackets,...
 Plug 'cespare/vim-toml'
+
+if has('nvim')
+  " Requires 'pip install neovim'
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+
+let g:deoplete#enable_at_startup = 1
 
 call plug#end()
 
