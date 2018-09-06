@@ -47,7 +47,7 @@ set incsearch       " Highlight search results as the search is typed
 set showcmd         " Show command on the bottom
 set ruler           " Show line and cursor position
 set cursorline      " Highlight current line
-set listchars=tab:>-,trail:· " Show tabs and trailing space
+set listchars=space:·,tab:>-,trail:· " Show tabs and spaces
 set list            " Enable the above settings
 set hidden          " No need to save the current buffer every time you do a goto-definition
 set nosmd
@@ -58,26 +58,29 @@ syntax on           " Enable syntax highlighting
 """""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
 
-Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'           " Show the git diff in the gutter
-Plug 'scrooloose/nerdtree'
-Plug 'xuyuanp/nerdtree-git-plugin'      " Git status icons in nerdtree
-Plug 'tpope/vim-surround'
-Plug 'scrooloose/syntastic'
+Plug 'cespare/vim-toml'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'majutsushi/tagbar'
-Plug 'tpope/vim-commentary'
+Plug 'davidhalter/jedi-vim'
 Plug 'elmcast/elm-vim'
 Plug 'fatih/vim-go'
-Plug 'rust-lang/rust.vim'
+Plug 'majutsushi/tagbar'
+Plug 'nvie/vim-flake8'
 Plug 'racer-rust/vim-racer'
+Plug 'Raimondi/delimitMate'             " Autocomplete quotes, parens, brackets,...
+Plug 'rust-lang/rust.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/syntastic'
+Plug 'stephpy/vim-yaml'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'tpope/vim-surround'
-Plug 'Raimondi/delimitMate'             " Autocomplete quotes, parens, brackets,...
-Plug 'cespare/vim-toml'
-Plug 'zchee/deoplete-go', { 'do': 'make'}
+Plug 'xuyuanp/nerdtree-git-plugin'      " Git status icons in nerdtree
+Plug 'Yggdroot/indentLine'              " Show indentations
 Plug 'yuttie/comfortable-motion.vim'    " Really smooth scrolling
+Plug 'zchee/deoplete-go', { 'do': 'make'}
 
 if has('nvim')
   " Requires 'pip install neovim'
