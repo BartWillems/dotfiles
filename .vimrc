@@ -36,6 +36,7 @@ set smarttab        " Smart tab indentation
 filetype plugin indent on
 autocmd filetype yaml    set tabstop=2
 autocmd filetype yaml    set shiftwidth=2
+autocmd filetype golang  set tabstop=4
 
 """""""""""""""""""""""""""""
 "        Interface          "
