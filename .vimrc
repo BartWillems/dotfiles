@@ -59,29 +59,34 @@ syntax on           " Enable syntax highlighting
 """""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
 
-Plug 'airblade/vim-gitgutter'           " Show the git diff in the gutter
+" Looks
+Plug 'itchyny/lightline.vim'
+Plug 'airblade/vim-gitgutter'  " Show the git diff in the gutter
+
+" Languages
 Plug 'cespare/vim-toml'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'davidhalter/jedi-vim'
 Plug 'elmcast/elm-vim'
 Plug 'fatih/vim-go'
-Plug 'majutsushi/tagbar'
-Plug 'nvie/vim-flake8'
-Plug 'racer-rust/vim-racer'
-Plug 'Raimondi/delimitMate'             " Autocomplete quotes, parens, brackets,...
 Plug 'rust-lang/rust.vim'
+Plug 'stephpy/vim-yaml'
+Plug 'nvie/vim-flake8'
+
+" Autocomplete
+Plug 'Raimondi/delimitMate' " Autocomplete quotes, parens, brackets,...
+Plug 'racer-rust/vim-racer'
+Plug 'zchee/deoplete-go', { 'do': 'make'}
+
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'davidhalter/jedi-vim'
+Plug 'majutsushi/tagbar'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
-Plug 'stephpy/vim-yaml'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'xuyuanp/nerdtree-git-plugin'      " Git status icons in nerdtree
 Plug 'Yggdroot/indentLine'              " Show indentations
 Plug 'yuttie/comfortable-motion.vim'    " Really smooth scrolling
-Plug 'zchee/deoplete-go', { 'do': 'make'}
 
 if has('nvim')
   " Requires 'pip install neovim'
@@ -95,23 +100,6 @@ endif
 let g:deoplete#enable_at_startup = 1
 
 call plug#end()
-
-let g:airline_left_sep = ''     " Use simple separators
-let g:airline_right_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_alt_sep = ''
-
-let g:airline_theme='atomic'
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#ale#enabled = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#show_buffers = 0
-let g:airline#extensions#tabline#show_splits = 0
-let g:airline#extensions#tabline#show_tabs = 1
-let g:airline#extensions#tabline#show_tab_nr = 0
-let g:airline#extensions#tabline#show_tab_type = 0
-let g:airline#extensions#tabline#close_symbol = '×'
-let g:airline#extensions#tabline#show_close_button = 0
 
 " Rust
 let g:rustfmt_autosave = 1
