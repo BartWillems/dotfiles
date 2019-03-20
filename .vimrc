@@ -48,7 +48,7 @@ set incsearch       " Highlight search results as the search is typed
 set showcmd         " Show command on the bottom
 set ruler           " Show line and cursor position
 set cursorline      " Highlight current line
-set listchars=space:·,tab:>-,trail:· " Show tabs and spaces
+set listchars=tab:>-,trail:· " Show tabs and spaces
 set list            " Enable the above settings
 set hidden          " No need to save the current buffer every time you do a goto-definition
 set nosmd
@@ -61,7 +61,11 @@ call plug#begin('~/.vim/plugged')
 
 " Looks
 Plug 'itchyny/lightline.vim'
-Plug 'airblade/vim-gitgutter'  " Show the git diff in the gutter
+Plug 'airblade/vim-gitgutter'      " Show the git diff in the gutter
+Plug 'majutsushi/tagbar'
+Plug 'scrooloose/nerdtree'
+Plug 'xuyuanp/nerdtree-git-plugin' " Git status icons in nerdtree
+Plug 'Yggdroot/indentLine'         " Show indentations
 
 " Languages
 Plug 'cespare/vim-toml'
@@ -76,17 +80,15 @@ Plug 'Raimondi/delimitMate' " Autocomplete quotes, parens, brackets,...
 Plug 'racer-rust/vim-racer'
 Plug 'zchee/deoplete-go', { 'do': 'make'}
 
+" Workflow
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'davidhalter/jedi-vim'
-Plug 'majutsushi/tagbar'
-Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
-Plug 'xuyuanp/nerdtree-git-plugin'      " Git status icons in nerdtree
-Plug 'Yggdroot/indentLine'              " Show indentations
 Plug 'yuttie/comfortable-motion.vim'    " Really smooth scrolling
+
+Plug 'davidhalter/jedi-vim'
+Plug 'scrooloose/syntastic'
+Plug 'tpope/vim-fugitive'
 
 if has('nvim')
   " Requires 'pip install neovim'
@@ -172,18 +174,22 @@ cmap w!! w !sudo tee % >/dev/null
 """""""""""""""""""""""""""""
 "        Colours and GUI    "
 """""""""""""""""""""""""""""
+let base16colorspace=256
+set background=dark
+colorscheme gruvbox
+
 if &term=='xterm'   " xterm supports 256 colours but doesn't set this
     set t_Co=256
 endif
+
+if (match($TERM, "-256color") != -1) && (match($TERM, "screen-256color") == -1)
+      " screen does not (yet) support truecolor
+    set termguicolors
+endif
+
 if &t_Co==256
-    let base16colorspace=256
-    set background=dark     " Use dark background
-    colorscheme gruvbox
     endif
 if has("gui_running")
-    let base16colorspace=256
-    set background=dark     " Use dark background
-    colorscheme gruvbox
     set guioptions+=TlrbRLe " Bug workaround
     set guioptions-=TlrbRLe " Hide the toolbar and scrollbars, use text tabs
     set guioptions+=c       " Don't open dialogue windows
