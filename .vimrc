@@ -68,11 +68,7 @@ Plug 'xuyuanp/nerdtree-git-plugin' " Git status icons in nerdtree
 Plug 'Yggdroot/indentLine'         " Show indentations
 
 " Languages
-Plug 'cespare/vim-toml'
-Plug 'elmcast/elm-vim'
-Plug 'fatih/vim-go'
-Plug 'rust-lang/rust.vim'
-Plug 'stephpy/vim-yaml'
+Plug 'sheerun/vim-polyglot'
 Plug 'nvie/vim-flake8'
 
 " Autocomplete
@@ -118,6 +114,9 @@ let delimitMate_expand_cr = 1
 
 " Ansible
 let g:ansible_unindent_after_newline = 1
+
+" Markdown
+let g:vim_markdown_conceal = 0 " Disable concealing text formatting/urls/code blocks/...
 
 
 """""""""""""""""""""""""""""
