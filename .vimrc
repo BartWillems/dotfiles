@@ -70,6 +70,8 @@ Plug 'Yggdroot/indentLine'         " Show indentations
 " Languages
 Plug 'sheerun/vim-polyglot'
 Plug 'nvie/vim-flake8'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
 
 " Autocomplete
 Plug 'Raimondi/delimitMate' " Autocomplete quotes, parens, brackets,...
@@ -117,6 +119,14 @@ let g:ansible_unindent_after_newline = 1
 
 " Markdown
 let g:vim_markdown_conceal = 0 " Disable concealing text formatting/urls/code blocks/...
+
+" Go
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_extra_types = 1
 
 
 """""""""""""""""""""""""""""
